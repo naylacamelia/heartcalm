@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Headline() {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
   return (
     <section id="headline" className="relative pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 md:pb-24 overflow-hidden bg-[#f7f7f7]">
@@ -94,12 +94,11 @@ export default function Headline() {
             className="lg:col-span-5 flex justify-center items-center"
           >
             <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
-              <Image
+              <img
                 src={`${base}/asset/product.svg`}
                 alt="Barrier Repair Water Gel"
                 width={420}
                 height={420}
-                priority
                 className="relative z-10 h-auto w-full max-h-[360px] object-contain drop-shadow-[0_20px_35px_rgba(0,130,222,0.16)] transition-transform duration-500 hover:scale-105"
               />
             </div>

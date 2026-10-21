@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { BsStarFill } from 'react-icons/bs';
 import ReflectiveCard from '../animations/reactbits/ReflectiveCard/ReflectiveCard';
 
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
 const testimonials = [
   {

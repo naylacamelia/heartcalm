@@ -11,7 +11,7 @@ const items = [
 ];
 
 export default function Manfaat() {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
   return (
     <section id="manfaat" className="nova-section relative overflow-hidden border-t border-[#e4e7e2] bg-[#ffffff]">

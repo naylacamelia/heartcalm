@@ -22,7 +22,7 @@ const socials = [
 ];
 
 export default function Footer() {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
   return (
     <footer className="border-t border-[#e4e7e2] bg-[#0082de] text-white">

@@ -10,7 +10,7 @@ const results = [
 ];
 
 export default function HasilPenggunaan() {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
   return (
     <section id="hasil-penggunaan" className="nova-section bg-[#f7f7f7] border-t border-[#e4e7e2]">

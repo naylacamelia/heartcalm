@@ -27,7 +27,7 @@ const caslonText = Libre_Caslon_Text({
   display: "swap",
 });
 
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
 export const metadata: Metadata = {
   title: "HEARTCALM Acne Water Gel — 10% Panthenol Barrier Repair Moisturizer",

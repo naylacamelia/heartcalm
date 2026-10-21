@@ -33,7 +33,7 @@ export const heroIngredients = [
   },
 ];
 
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
 export const slides = [
   {

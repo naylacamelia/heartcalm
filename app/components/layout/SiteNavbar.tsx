@@ -38,7 +38,7 @@ export default function SiteNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || (process.env.NODE_ENV === "production" ? "/heartcalm" : "");
 
   return (
     <header
@@ -51,12 +51,11 @@ export default function SiteNavbar() {
       <div className="nova-container flex h-16 sm:h-20 items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image
+          <img
             src={`${base}/asset/logo-heartcalm-2.png`}
             alt="HEARTCALM"
             width={140}
             height={36}
-            priority
             className="h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
           />
         </Link>
