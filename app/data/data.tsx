@@ -33,10 +33,12 @@ export const heroIngredients = [
   },
 ];
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const slides = [
   {
     id: 1,
-    img: "/asset/background/bg-permasalahan-3.svg",
+    img: `${base}/asset/background/bg-permasalahan-3.svg`,
     card: {
       kicker: "Panggilan untuk...",
       lines: ["Pejuang Acne-Prone Skin,", "Merapat!"],
@@ -45,31 +47,31 @@ export const slides = [
   },
   {
     id: 2,
-    img: "/asset/background/permasalahan-jerawat.svg",
+    img: `${base}/asset/background/permasalahan-jerawat.svg`,
     label: "Jerawat Meradang",
     desc: "Jerawat kemerahan dan bruntusan yang terus berulang.",
   },
   {
     id: 3,
-    img: "/asset/background/permasalahan-gatal.svg",
+    img: `${base}/asset/background/permasalahan-gatal.svg`,
     label: "Gatal & Iritasi",
     desc: "Sensasi perih dan gatal akibat barrier kulit melemah.",
   },
   {
     id: 4,
-    img: "/asset/background/permasalahan-kemerahan.svg",
+    img: `${base}/asset/background/permasalahan-kemerahan.svg`,
     label: "Kemerahan Ekstrem",
     desc: "Kulit reaktif yang memerah terpapar matahari atau polusi.",
   },
   {
     id: 5,
-    img: "/asset/background/permasalahan-sensitif.svg",
+    img: `${base}/asset/background/permasalahan-sensitif.svg`,
     label: "Sensitif & Dehidrasi",
     desc: "Berminyak di luar namun terasa kering dan ketarik di dalam.",
   },
   {
     id: 6,
-    img: "/asset/background/bg-permasalahan-3.svg",
+    img: `${base}/asset/background/bg-permasalahan-3.svg`,
     card: {
       kicker: "Dapat diatasi dengan...",
       lines: ["10% Panthenol", "Barrier Repair Water Gel", "Moisturizer"],
@@ -119,28 +121,28 @@ export const testimonials = [
   {
     name: "Nadya",
     role: "Mahasiswa • Acne-Prone",
-    img: "/asset/profile-user/nadya.svg",
+    img: `${base}/asset/profile-user/nadya.svg`,
     text: "Teksturnya ringan dan cepat menyerap. Setelah sekitar seminggu pemakaian, kulit terasa lebih lembap dan kelihatan lebih tenang. Gak bikin jerawatan baru!",
     rating: 5,
   },
   {
     name: "Mia",
     role: "Content Creator • Kulit Sensitif",
-    img: "/asset/profile-user/mia.svg",
+    img: `${base}/asset/profile-user/mia.svg`,
     text: "Biasanya pakai moisturizer takut lengket, tapi yang ini nyaman banget dengan cooling effect-nya. Kemerahan di area pipi juga tampak berkurang signifikan.",
     rating: 5,
   },
   {
     name: "Alya",
     role: "Beauty Enthusiast • Oily Skin",
-    img: "/asset/profile-user/alya.svg",
+    img: `${base}/asset/profile-user/alya.svg`,
     text: "Cocok untuk kulitku yang mudah berjerawat. Setelah rutin dipakai, kulit terasa lebih lembap dan jerawat aktif terlihat lebih kalem tanpa bikin greasy di siang hari.",
     rating: 5,
   },
   {
     name: "Luna",
     role: "Freelancer • Barrier Damaged",
-    img: "/asset/profile-user/luna.svg",
+    img: `${base}/asset/profile-user/luna.svg`,
     text: "Tekstur gel-nya ringan tapi ampuh menenangkan kulit sensitifku. Membuat wajah tampak sehat dan segar tanpa rasa lengket sama sekali. Definisi penyelamat barrier!",
     rating: 5,
   },

@@ -38,6 +38,8 @@ export default function SiteNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -50,7 +52,7 @@ export default function SiteNavbar() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Image
-            src="/asset/logo-heartcalm-2.png"
+            src={`${base}/asset/logo-heartcalm-2.png`}
             alt="HEARTCALM"
             width={140}
             height={36}

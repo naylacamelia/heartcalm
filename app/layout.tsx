@@ -27,18 +27,20 @@ const caslonText = Libre_Caslon_Text({
   display: "swap",
 });
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "HEARTCALM Acne Water Gel — 10% Panthenol Barrier Repair Moisturizer",
   description: "Gel ringan dengan cooling sensation, membantu menenangkan jerawat dan mengontrol minyak. Diformulasikan dengan 5% Panthenol, 5X Ceramide, Pure Centella, dan Compound Ection.",
   icons: {
-    icon: "/asset/logo-heartcalm.png",
-    shortcut: "/asset/logo-heartcalm.png",
-    apple: "/asset/logo-heartcalm.png",
+    icon: `${base}/asset/logo-heartcalm.png`,
+    shortcut: `${base}/asset/logo-heartcalm.png`,
+    apple: `${base}/asset/logo-heartcalm.png`,
   },
   openGraph: {
     title: "HEARTCALM Acne Water Gel",
     description: "Gel ringan dengan cooling sensation untuk kulit acne-prone.",
-    images: [{ url: "/asset/logo-heartcalm-2.png" }],
+    images: [{ url: `${base}/asset/logo-heartcalm-2.png` }],
     type: "website",
   },
 };

@@ -33,6 +33,8 @@ const BAHAN_LAIN =
   "Water, Panthenol, Centella Asiatica Extract, Calendula Officinalis Extract, Avena Sativa (Oat) Kernel Extract, Phaeodactylum Tricornutum Extract, Chlorella Vulgaris Extract, Pentylene Glycol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ceramide NP, Ceramide AS, Ceramide NS, Ceramide NG, Ceramide AP, Ceramide EOP, Butylene Glycol, Glycerophosphoinositol Choline, Glycerin, Ectoin, Tocopherol, Pentasodium Pentetate, Erythritol, Propanediol, Phytic Acid, Silver Oxide, Diethoxyethyl Succinate";
 
 export default function Bahan() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section id="bahan" className="nova-section bg-[#ffffff] border-t border-[#e4e7e2]">
       <div className="nova-container">
@@ -86,7 +88,7 @@ export default function Bahan() {
                     {/* Background texture */}
                     <div className="absolute inset-0 opacity-15 pointer-events-none">
                       <img
-                        src="/asset/background/bg-bahan.svg"
+                        src={`${base}/asset/background/bg-bahan.svg`}
                         alt=""
                         className="h-full w-full object-cover"
                       />

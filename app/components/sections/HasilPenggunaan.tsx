@@ -10,6 +10,8 @@ const results = [
 ];
 
 export default function HasilPenggunaan() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section id="hasil-penggunaan" className="nova-section bg-[#f7f7f7] border-t border-[#e4e7e2]">
       <div className="nova-container">
@@ -65,7 +67,7 @@ export default function HasilPenggunaan() {
           >
             <div className="relative w-full max-w-[380px] aspect-square flex items-center justify-center">
               <img
-                src="/asset/background/bg-hasil-penggunaan-2.svg"
+                src={`${base}/asset/background/bg-hasil-penggunaan-2.svg`}
                 alt="HEARTCALM Hasil Penggunaan"
                 className="h-full w-full object-contain drop-shadow-sm"
               />

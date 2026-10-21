@@ -22,6 +22,8 @@ const socials = [
 ];
 
 export default function Footer() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <footer className="border-t border-[#e4e7e2] bg-[#0082de] text-white">
       <div className="nova-container py-14 sm:py-16">
@@ -30,7 +32,7 @@ export default function Footer() {
           {/* Brand Logo */}
           <div className="lg:col-span-3 flex justify-center sm:justify-start">
             <img
-              src="/asset/logo-heartcalm-2.png"
+              src={`${base}/asset/logo-heartcalm-2.png`}
               alt="HEARTCALM"
               className="h-10 sm:h-12 w-auto object-contain brightness-0 invert"
             />

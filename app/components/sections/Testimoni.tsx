@@ -5,13 +5,15 @@ import { motion } from 'framer-motion';
 import { BsStarFill } from 'react-icons/bs';
 import ReflectiveCard from '../animations/reactbits/ReflectiveCard/ReflectiveCard';
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const testimonials = [
   {
     name: 'Nadya',
     role: 'Verified Buyer',
     status: 'Verified',
     idValue: 'HC-9201 4582',
-    img: '/asset/profile-user/nadya.svg',
+    img: `${base}/asset/profile-user/nadya.svg`,
     text: 'Teksturnya ringan dan cepat menyerap. Setelah sekitar seminggu pemakaian, kulit terasa lebih lembap dan kelihatan lebih tenang.',
   },
   {
@@ -19,7 +21,7 @@ const testimonials = [
     role: 'Verified Buyer',
     status: 'Verified',
     idValue: 'HC-8147 9263',
-    img: '/asset/profile-user/mia.svg',
+    img: `${base}/asset/profile-user/mia.svg`,
     text: 'Biasanya pakai moisturizer takut lengket, tapi yang ini nyaman banget. Kemerahan di area pipi juga tampak berkurang.',
   },
   {
@@ -27,7 +29,7 @@ const testimonials = [
     role: 'Verified Buyer',
     status: 'Verified',
     idValue: 'HC-7628 3451',
-    img: '/asset/profile-user/alya.svg',
+    img: `${base}/asset/profile-user/alya.svg`,
     text: 'Cocok untuk kulitku yang mudah berjerawat. Setelah rutin dipakai, kulit terasa lebih lembap dan jerawat aktif terlihat lebih kalem.',
   },
   {
@@ -35,7 +37,7 @@ const testimonials = [
     role: 'Verified Buyer',
     status: 'Verified',
     idValue: 'HC-6519 8742',
-    img: '/asset/profile-user/luna.svg',
+    img: `${base}/asset/profile-user/luna.svg`,
     text: 'Tekstur gel-nya ringan tapi ampuh menenangkan kulit sensitifku, membuat wajahku tampak sehat tanpa rasa lengket sama sekali.',
   },
 ];

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Headline() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section id="headline" className="relative pt-8 sm:pt-14 md:pt-20 pb-12 sm:pb-16 md:pb-24 overflow-hidden bg-[#f7f7f7]">
       <div className="nova-container relative z-10">
@@ -38,7 +40,7 @@ export default function Headline() {
             <div className="my-6 sm:my-7 flex items-center gap-2 sm:gap-3 flex-wrap">
               <div className="flex items-center gap-2 rounded-full bg-white border border-[#e4e7e2] px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-sm">
                 <img
-                  src="/asset/icon/icon-natural.svg"
+                  src={`${base}/asset/icon/icon-natural.svg`}
                   alt="natural-ingredients"
                   className="h-5 w-5 sm:h-6 sm:w-6 object-contain"
                 />
@@ -46,7 +48,7 @@ export default function Headline() {
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white border border-[#e4e7e2] px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-sm">
                 <img
-                  src="/asset/icon/icon-original-heartcalm.svg"
+                  src={`${base}/asset/icon/icon-original-heartcalm.svg`}
                   alt="original-heartcalm"
                   className="h-5 w-5 sm:h-6 sm:w-6 object-contain"
                 />
@@ -54,7 +56,7 @@ export default function Headline() {
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white border border-[#e4e7e2] px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-sm">
                 <img
-                  src="/asset/icon/icon-semua-jenis-kulit.svg"
+                  src={`${base}/asset/icon/icon-semua-jenis-kulit.svg`}
                   alt="for-all-skin-types"
                   className="h-5 w-5 sm:h-6 sm:w-6 object-contain"
                 />
@@ -93,7 +95,7 @@ export default function Headline() {
           >
             <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
               <Image
-                src="/asset/product.svg"
+                src={`${base}/asset/product.svg`}
                 alt="Barrier Repair Water Gel"
                 width={420}
                 height={420}

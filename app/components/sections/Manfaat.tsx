@@ -11,6 +11,8 @@ const items = [
 ];
 
 export default function Manfaat() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <section id="manfaat" className="nova-section relative overflow-hidden border-t border-[#e4e7e2] bg-[#ffffff]">
       <div className="nova-container">
@@ -27,7 +29,7 @@ export default function Manfaat() {
             <div className="relative overflow-hidden rounded-[2rem] border border-[#e4e7e2] bg-white shadow-[0_20px_50px_-20px_rgba(22,24,22,0.06)]">
               <div className="aspect-[4/5] relative">
                 <img
-                  src="/asset/background/bg-manfaat.svg"
+                  src={`${base}/asset/background/bg-manfaat.svg`}
                   alt="Kulit tenang dengan HEARTCALM"
                   className="h-full w-full object-cover"
                 />

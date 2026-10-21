@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   basePath: "/heartcalm",
   assetPrefix: "/heartcalm/",
   images: { unoptimized: true },
+  env: { NEXT_PUBLIC_BASE_PATH: "/heartcalm" },
 };
 
 export default nextConfig;
